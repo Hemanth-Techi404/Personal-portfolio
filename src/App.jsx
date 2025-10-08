@@ -1,17 +1,36 @@
 import { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code2 } from 'lucide-react';
-import Hero from './Components/Hero.jsx';
-import About from './Components/About.jsx';
-import Skills from './Components/Skills.jsx';
-import Projects from './Components/Projects.jsx';
-import Contact from './Components/Contact.jsx';
+import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
+import { Menu, X, Github, Linkedin, Code2 } from 'lucide-react';
+import HomePage from './pages/HomePage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ProjectsPage from './pages/ProjectsPage.jsx';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleAboutClick = () => {
+    navigate('/about');
+    setIsMenuOpen(false);
+  };
+
+  const handleProjectsClick = () => {
+    navigate('/projects');
     setIsMenuOpen(false);
   };
 
@@ -20,22 +39,22 @@ function App() {
       <nav className="fixed w-full bg-gray-900/95 backdrop-blur-md border-b border-emerald-500/20 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Code2 className="w-8 h-8 text-emerald-400" />
               <span className="text-xl font-bold text-white">Hemanth</span>
-            </div>
+            </Link>
 
             <div className="hidden md:flex space-x-8">
               <button onClick={() => scrollToSection('home')} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
                 Home
               </button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
+              <button onClick={handleAboutClick} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
                 About
               </button>
               <button onClick={() => scrollToSection('skills')} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
                 Skills
               </button>
-              <button onClick={() => scrollToSection('projects')} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
+              <button onClick={handleProjectsClick} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
                 Projects
               </button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-emerald-400 transition-colors font-medium">
@@ -58,13 +77,13 @@ function App() {
               <button onClick={() => scrollToSection('home')} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
                 Home
               </button>
-              <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
+              <button onClick={handleAboutClick} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
                 About
               </button>
               <button onClick={() => scrollToSection('skills')} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
                 Skills
               </button>
-              <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
+              <button onClick={handleProjectsClick} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
                 Projects
               </button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-gray-300">
@@ -76,11 +95,11 @@ function App() {
       </nav>
 
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Routes>
       </main>
 
       <footer className="bg-gray-950 border-t border-emerald-500/20 text-white py-8">
