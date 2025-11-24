@@ -6,39 +6,39 @@ export default function Projects() {
       title: 'Food Delivery Application',
       description: 'A comprehensive food delivery platform featuring real-time order tracking, restaurant management, and seamless payment integration. Built with React JS for optimal performance.',
       tags: ['React JS', 'Node.js', 'MongoDB'],
-      gradient: 'from-orange-500 to-red-600',
+      image: '/images/food-delivery.png',
       github: 'https://github.com/Hemanth-Techi404',
     },
     {
       title: 'E-Commerce Website',
       description: 'Full-featured online shopping platform with product catalog, shopping cart, user authentication, and secure payment processing. Designed for scalability and user experience.',
       tags: ['React JS', 'Express', 'MongoDB', 'Tailwind'],
-      gradient: 'from-emerald-500 to-blue-600',
+      image: '/images/ecommerce.png',
       github: 'https://github.com/Hemanth-Techi404',
     },
     {
       title: 'News Application',
       description: 'Dynamic news aggregation platform that fetches and displays latest articles from multiple sources. Features category filtering, search functionality, and responsive design.',
       tags: ['React JS', 'JavaScript', 'CSS'],
-      gradient: 'from-pink-500 to-rose-600',
+      image: '/images/news-app.png',
       github: 'https://github.com/Hemanth-Techi404',
     },
     {
-      title: 'Weather Application',
-      description: 'Real-time weather tracking application providing detailed forecasts, weather alerts, and location-based climate information with an intuitive user interface.',
+      title: 'E-Sports Gaming Website',
+      description: 'Modern gaming platform showcasing e-sports tournaments, player profiles, and gaming news with stunning visuals and smooth animations.',
       tags: ['React JS', 'JavaScript', 'HTML', 'CSS'],
-      gradient: 'from-blue-500 to-cyan-600',
+      image: '/images/esports.png',
       github: 'https://github.com/Hemanth-Techi404',
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50 backdrop-blur-sm">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#161B22]/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#E6EDF3] mb-4">Featured Projects</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#2D9CDB] to-[#00C6FF] mx-auto rounded-full"></div>
+          <p className="mt-6 text-lg text-[#8B949E] max-w-2xl mx-auto">
             Explore some of my recent work showcasing full-stack development capabilities
           </p>
         </div>
@@ -47,19 +47,24 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group bg-gray-800/50 border border-emerald-500/20 rounded-xl overflow-hidden hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300 transform hover:-translate-y-1"
+              className="group bg-[#161B22]/70 border border-[#2D9CDB]/20 rounded-xl overflow-hidden hover:border-[#2D9CDB]/40 hover:shadow-2xl hover:shadow-[#2D9CDB]/20 transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
+              <div className="h-48 relative overflow-hidden bg-[#161B22]">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#161B22] via-[#161B22]/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                  <div className="text-[#E6EDF3] text-center px-4">
+                    <h3 className="text-2xl font-bold drop-shadow-lg">{project.title}</h3>
                   </div>
                 </div>
               </div>
 
               <div className="p-6">
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <p className="text-[#8B949E] mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -67,7 +72,7 @@ export default function Projects() {
                   {project.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-[#2D9CDB]/10 text-[#2D9CDB] border border-[#2D9CDB]/20 rounded-full text-sm font-medium"
                     >
                       {tag}
                     </span>
@@ -79,7 +84,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-200"
+                    className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00C6FF] text-[#E6EDF3] rounded-lg hover:shadow-lg hover:shadow-[#2D9CDB]/50 transition-all duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>View Project</span>
@@ -93,3 +98,4 @@ export default function Projects() {
     </section>
   );
 }
+

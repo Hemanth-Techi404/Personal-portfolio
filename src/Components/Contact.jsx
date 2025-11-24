@@ -41,59 +41,59 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50 backdrop-blur-sm">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#161B22]/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#E6EDF3] mb-4">Get In Touch</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#2D9CDB] to-[#00C6FF] mx-auto rounded-full"></div>
+          <p className="mt-6 text-lg text-[#8B949E] max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-gray-900/50 border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300">
+            <div className="bg-[#161B22]/80 border border-[#2D9CDB]/20 rounded-xl p-6 hover:border-[#2D9CDB]/40 hover:shadow-lg hover:shadow-[#2D9CDB]/20 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-[#2D9CDB] to-[#00C6FF] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-[#E6EDF3]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <a href="mailto:chellapillihemanth993@gmail.com" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-[#E6EDF3] mb-1">Email</h3>
+                  <a href="mailto:chellapillihemanth993@gmail.com" className="text-[#8B949E] hover:text-[#2D9CDB] transition-colors">
                     chellapillihemanth993@gmail.com
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-900/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+            <div className="bg-[#161B22]/80 border border-[#00C6FF]/20 rounded-xl p-6 hover:border-[#00C6FF]/40 hover:shadow-lg hover:shadow-[#00C6FF]/20 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-[#00C6FF] to-[#A259FF] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-[#E6EDF3]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                  <p className="text-gray-400">Available on request</p>
+                  <h3 className="text-lg font-semibold text-[#E6EDF3] mb-1">Phone</h3>
+                  <p className="text-[#8B949E]">Available on request</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-900/50 border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300">
+            <div className="bg-[#161B22]/80 border border-[#A259FF]/20 rounded-xl p-6 hover:border-[#A259FF]/40 hover:shadow-lg hover:shadow-[#A259FF]/20 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-[#A259FF] to-[#2D9CDB] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[#E6EDF3]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-1">Location</h3>
-                  <p className="text-gray-400">Available for remote work</p>
+                  <h3 className="text-lg font-semibold text-[#E6EDF3] mb-1">Location</h3>
+                  <p className="text-[#8B949E]">Available for remote work</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl p-6 text-white shadow-lg shadow-emerald-500/20">
+            <div className="bg-gradient-to-br from-[#2D9CDB] to-[#00C6FF] rounded-xl p-6 text-[#E6EDF3] shadow-lg shadow-[#2D9CDB]/20">
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
-              <p className="mb-6 text-white/90">
+              <p className="mb-6 text-[#E6EDF3]/90">
                 Follow me on social media to stay updated with my latest projects and tech insights.
               </p>
               <div className="flex space-x-4">
@@ -120,10 +120,10 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="bg-gray-900/50 border border-emerald-500/20 rounded-xl p-8 shadow-lg">
+            <form onSubmit={handleSubmit} className="bg-[#161B22]/80 border border-[#2D9CDB]/20 rounded-xl p-8 shadow-lg">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-[#E6EDF3] mb-2">
                     Your Name
                   </label>
                   <input
@@ -133,13 +133,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 bg-[#161B22] border border-[#161B22] text-[#E6EDF3] rounded-lg focus:ring-2 focus:ring-[#2D9CDB] focus:border-transparent outline-none transition-all duration-200"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-[#E6EDF3] mb-2">
                     Your Email
                   </label>
                   <input
@@ -149,13 +149,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 bg-[#161B22] border border-[#161B22] text-[#E6EDF3] rounded-lg focus:ring-2 focus:ring-[#2D9CDB] focus:border-transparent outline-none transition-all duration-200"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-[#E6EDF3] mb-2">
                     Subject
                   </label>
                   <input
@@ -165,13 +165,13 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all duration-200"
+                    className="w-full px-4 py-3 bg-[#161B22] border border-[#161B22] text-[#E6EDF3] rounded-lg focus:ring-2 focus:ring-[#2D9CDB] focus:border-transparent outline-none transition-all duration-200"
                     placeholder="Project Inquiry"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-[#E6EDF3] mb-2">
                     Message
                   </label>
                   <textarea
@@ -181,7 +181,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 bg-[#161B22] border border-[#161B22] text-[#E6EDF3] rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all duration-200 resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
@@ -189,7 +189,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00C6FF] text-[#E6EDF3] rounded-lg font-medium hover:shadow-lg hover:shadow-[#2D9CDB]/50 transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === 'sending' ? (
                     <>
@@ -210,14 +210,14 @@ export default function Contact() {
                 </button>
 
                 {status === 'success' && (
-                  <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400 text-center">
+                  <div className="p-4 bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 rounded-lg text-[#2D9CDB] text-center">
                     Your email client has been opened. Please send the email to complete your message.
                   </div>
                 )}
 
-                <p className="text-gray-500 text-sm text-center">
+                <p className="text-[#8B949E] text-sm text-center">
                   Or email me directly at{' '}
-                  <a href="mailto:chellapillihemanth993@gmail.com" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <a href="mailto:chellapillihemanth993@gmail.com" className="text-[#2D9CDB] hover:text-purple-300 transition-colors">
                     chellapillihemanth993@gmail.com
                   </a>
                 </p>
@@ -229,3 +229,5 @@ export default function Contact() {
     </section>
   );
 }
+
+
